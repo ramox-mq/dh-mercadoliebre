@@ -1,0 +1,132 @@
+/*Estilos generales*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--Gris-claro);
+}
+
+p {
+    font-size: 12px;
+}
+
+h2 {
+    font-size: 24px;
+    color: var(--Gris-oscuro);
+}
+
+.precio {
+    font-size: 18px;
+    width: 30%;
+}
+
+.descuento,
+.descripcion {
+    font-size: 16px;
+}
+
+.descuento {
+    color: var(--Verde);
+    width: 70%;
+}
+
+.descripcion {
+    color: var(--Gris-oscuro);
+    display: none;
+}
+
+.tamaño {
+    font-size: 2em;
+}
+
+:root {
+    --Amarillo: #EAC926;
+    --Azul: #03264C;
+    --Celeste: #1259c3;
+    --Gris-oscuro: #666;
+    --Gris-claro: #ebebeb;
+    --Verde: #39b54a;
+    --Blanco: #fff;
+}
+
+figure {
+    width: auto;
+}
+
+figure img {
+    width: 100%;
+}
+
+.verde {
+    color: var(--Verde);
+}
+
+/*Aplicando CSS al header*/
+
+header {
+    background-color: var(--Amarillo);
+}
+
+header ul {
+    display: none;
+}
+
+/*Aplicando CSS al main*/
+
+main {
+    width: 90%;
+}
+
+main section article {
+    margin-bottom: 10px;
+    background-color: var(--Blanco);
+}
+
+.detalles-producto {
+    border-top: solid 1px var(--Gris-claro);
+    padding: 15px;
+    position: relative;
+}
+
+.fa-truck {
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+}
+
+.precio-descuento {
+    display: flex;
+}
+
+/*Aplicando CSS al footer*/
+
+footer {
+    text-align: center;
+}
+
+footer section div i {
+    color: var(--Celeste);
+}
+
+
+
+@media (min-width: 361px) {
+    main section article {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+}
+
+@media (min-width: 769px) {}
