@@ -80,9 +80,17 @@ header ul {
 
 main {
     width: 90%;
+    margin: 0 auto;
 }
 
-main section article {
+.articles-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+
+main section div article {
     margin-bottom: 10px;
     background-color: var(--Blanco);
 }
@@ -123,10 +131,55 @@ footer section div i {
 
 
 
-@media (min-width: 361px) {
-    main section article {
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+@media (min-width: 480px) {
+
+    /*Estilos globales*/
+
+    .descuento {
+        width: 52%;
     }
+
+    .precio {
+        width: 48%;
+    }
+
+    .descripcion {
+        display: block;
+    }
+    /*Aplicando CSS al header*/
+
+    /*Aplicando CSS al main*/
+
+    main section div article {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        width: 47%;
+    }
+
+    .articles-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    /*Aplicando CSS al footer*/
+
 }
 
-@media (min-width: 769px) {}
+@media (min-width: 769px) {
+    /*Estilos globales*/
+    /*Aplicando CSS al header*/
+    /*Aplicando CSS al main*/
+
+    main section div article {
+        width: 23%;
+    }
+
+    .articles-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .precio-descuento {
+        display: block;
+    }
+    /*Aplicando CSS al footer*/
+}
