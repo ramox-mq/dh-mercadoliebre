@@ -56,14 +56,20 @@ h2 {
 
 figure {
     width: auto;
+    text-align: center;
 }
 
 figure img {
-    width: 100%;
+    width: 90%;
 }
 
 .verde {
     color: var(--Verde);
+}
+
+input {
+    border: none;
+    outline-color: var(--Azul);
 }
 
 /*Aplicando CSS al header*/
@@ -72,8 +78,48 @@ header {
     background-color: var(--Amarillo);
 }
 
+.logo-container {
+    padding: 10px 0;
+}
+
 header ul {
     display: none;
+}
+
+header p {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.busqueda input {
+    height: 40px;
+    border-radius: 7px;
+    width: 60%;
+    padding-left: 10px;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.search-icon {
+    display: inline-block;
+    position: relative;
+    right: 30px;
+    background-color: var(--Blanco);
+    padding: 4px;
+}
+
+
+.burger-menu {
+    text-align: center;
+}
+.fa-bars {
+    font-size: 1.5em;
+    color: var(--Blanco);
+    background-color: var(--Celeste);
+    padding: 10px;
+    margin: 15px;
+    border-radius: 3px;
 }
 
 /*Aplicando CSS al main*/
@@ -130,7 +176,6 @@ footer section div i {
 }
 
 
-
 @media (min-width: 480px) {
 
     /*Estilos globales*/
@@ -148,6 +193,36 @@ footer section div i {
     }
     /*Aplicando CSS al header*/
 
+    header figure img{
+        width: 90%;
+    }
+
+    .logo-barra {
+        display: flex;
+        justify-content: space-evenly;
+        height: 80px;
+
+    }
+
+    .logo-container {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .busqueda {
+        width: 50%;
+        display: flex;
+        align-items: center;
+    }
+
+    .busqueda input {
+        width: 90%;
+    }
+
+    .search-icon {
+        right: 25px;
+    }
     /*Aplicando CSS al main*/
 
     main section div article {
@@ -161,8 +236,8 @@ footer section div i {
     }
 
     /*Aplicando CSS al footer*/
-
-}
+    
+} 
 
 @media (min-width: 769px) {
     /*Estilos globales*/
