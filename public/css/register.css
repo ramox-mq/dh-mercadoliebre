@@ -1,0 +1,329 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Amarillo: #EAC926;
+    --Azul: #03264C;
+    --Celeste: #1259c3;
+    --Gris-oscuro: #666;
+    --Gris-claro: #ebebeb;
+    --Verde: #39b54a;
+    --Blanco: #fff;
+    --rojo: #ce0303;
+}
+
+button {
+    color: var(--Blanco);
+}
+
+.titular {
+    margin-bottom: 7px;
+}
+
+.no-radio-checkbox {
+    border: 1px solid black;
+    outline-color: var(--Azul);
+    height: 30px;
+    margin-bottom: 10px;
+    width: 90%;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--Gris-claro);
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+li {
+    list-style-type: none;
+}
+
+.tamaño {
+    font-size: 2em;
+}
+
+/*Aplicando CSS al header*/
+
+header {
+    background-color: var(--Amarillo);
+}
+
+.inp-busqueda {
+    
+    border: none;
+    outline-color: var(--Azul);
+}
+
+header figure img{
+    width: 90%;
+}
+
+.logo-container {
+    width: 50%;
+    margin: auto;
+}
+
+.logo-barra {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px 0;
+}
+
+
+header ul {
+    display: none;
+}
+
+header p {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.busqueda {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.busqueda input {
+    height: 40px;
+    border-radius: 7px;
+    width: 90%;
+    padding-left: 10px;
+    font-size: 18px;
+}
+
+.search-icon {
+    display: inline-block;
+    position: relative;
+    background-color: var(--Blanco);
+    right: 25px;
+    padding: 4px;
+}
+
+.hand-holding {
+    width: 70%;
+}
+
+.burger-menu {
+    text-align: center;
+}
+.fa-bars {
+    font-size: 1.5em;
+    color: var(--Blanco);
+    background-color: var(--Celeste);
+    padding: 10px;
+    margin: 17px;
+    border-radius: 3px;
+}
+
+
+/*Aplicando CSS al main*/
+
+main {
+    padding: 20px;
+    background-color: var(--Blanco);
+    margin-bottom: 20px;
+}
+
+main form {
+    display: flex;
+    flex-direction: column;
+}
+
+.dato-usuario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.profile-user,
+.interes {
+    width: 100%;
+}
+
+.check-inp {
+    margin-right: 10px;
+}
+
+.form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.radio-label {
+    display: inline-flex;
+    align-items: center;
+}
+
+.cb {
+    margin-right: 7px;
+}
+
+.form-2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-2 label {
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+
+.demas {
+    width: 100%;
+}
+
+.demas-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.celeste {
+    background-color: var(--Celeste);
+}
+
+.rojo {
+    background-color: var(--rojo);
+}
+
+/*Aplicando CSS al footer*/
+
+footer {
+    text-align: center;
+    background-color: #FFF;
+    padding: 10px;
+}
+
+
+footer section {
+    margin: 15px;
+}
+
+footer section div i {
+    color: var(--Celeste);
+}
+
+
+@media (min-width: 481px) {
+    
+    .logo-container,
+    .busqueda,
+    .hand-holding {
+        width: 32%;
+    }
+
+
+    header div ul {
+        display: block;
+    }
+
+    .list-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-bottom: 15px;
+    }
+
+    .derecha i {
+        display: none;
+    }
+
+    .izquierda,
+    .derecha {
+        display: flex;
+        justify-content: center;
+        max-width: 50%;
+        font-size: 13px;
+        gap: 10px;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+    /*main*/
+
+    main {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+    }
+}
+
+@media (min-width: 769px) {
+    .logo-barra {
+        align-items: center;
+    }
+
+    .derecha i {
+        display: block;
+    }
+
+    .no-radio-checkbox {
+        width: 45%;
+    }
+
+    .nacimiento {
+        width: 100%;
+    }
+
+    .dato-usuario {
+        width: 100%;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .form-2 {
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .demas-container {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .dos {
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .dos:hover {
+        background-color: #a40404;
+    }
+
+    .uno {
+        order: 1;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .uno:hover {
+        background-color: #0022aa;
+    }
+}
