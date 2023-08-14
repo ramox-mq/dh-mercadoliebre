@@ -84,19 +84,17 @@ header figure img{
 
 .logo-container {
     width: 50%;
-    display: flex;
-    justify-content: center;
+    margin: auto;
 }
 
 .logo-barra {
     display: flex;
     justify-content: space-evenly;
-    height: 80px;
-}
-
-.logo-container {
+    flex-direction: row;
+    flex-wrap: wrap;
     padding: 10px 0;
 }
+
 
 header ul {
     display: none;
@@ -129,6 +127,9 @@ header p {
     padding: 4px;
 }
 
+.hand-holding {
+    width: 70%;
+}
 
 .burger-menu {
     text-align: center;
@@ -138,7 +139,7 @@ header p {
     color: var(--Blanco);
     background-color: var(--Celeste);
     padding: 10px;
-    margin: 15px;
+    margin: 17px;
     border-radius: 3px;
 }
 
@@ -182,20 +183,37 @@ main section div article {
 
 .precio-descuento {
     display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
+
+.precio {
+    width: 50%;
+}
+
+.descuento {
+    width: 50%;
+}
+
 
 /*Aplicando CSS al footer*/
 
 footer {
     text-align: center;
+    background-color: #FFF;
+    padding: 10px;
+}
+
+
+footer section {
+    margin: 15px;
 }
 
 footer section div i {
     color: var(--Celeste);
 }
 
-
-@media (min-width: 480px) {
+@media (min-width: 481px) {
 
     /*Estilos globales*/
 
@@ -215,10 +233,43 @@ footer section div i {
         text-decoration: none;
         color: #000;
     }
+
+    li {
+        list-style-type: none;
+    }
     /*Aplicando CSS al header*/
     
+    .logo-container,
+    .busqueda,
+    .hand-holding {
+        width: 32%;
+    }
+
+
     header div ul {
         display: block;
+    }
+
+    .list-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 15px;
+    }
+
+    .derecha i {
+        display: none;
+    }
+
+    .izquierda,
+    .derecha {
+        display: flex;
+        justify-content: center;
+        max-width: 50%;
+        font-size: 13px;
+        gap: 10px;
     }
 
     .burger-menu {
@@ -243,6 +294,15 @@ footer section div i {
 @media (min-width: 769px) {
     /*Estilos globales*/
     /*Aplicando CSS al header*/
+
+    .logo-barra {
+        align-items: center;
+    }
+
+    .derecha i {
+        display: block;
+    }
+
     /*Aplicando CSS al main*/
 
     main section div article {
@@ -254,8 +314,30 @@ footer section div i {
         justify-content: space-between;
     }
 
-    .precio-descuento {
-        display: block;
+    .descripcion {
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    main section div article {
+        box-shadow: none;
+        transition: box-shadow 0.3s ease-in-out;
+    }
+
+    main section div article:hover {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    .descripcion:hover {
+        opacity: 1;
+    }
+
+    .fa-truck {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .fa-truck:hover {
+        transform: rotate(-90deg);
     }
     /*Aplicando CSS al footer*/
 }
